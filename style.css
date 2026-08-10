@@ -16,7 +16,7 @@ body {
 
 }
 
-.conteudo {
+.content {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -27,8 +27,8 @@ body {
     z-index: 2;
 }
 
-.conteudo h1 {
-    color: rgb(166, 30, 30);
+.content h1 {
+    color: yellowgreen;
     font-family: Georgia, serif;
     font-size: 50px;
     font-weight: normal;
@@ -36,8 +36,9 @@ body {
 
 }
 
-.pequeno {
+.smal {
     color: black;
+    font-style: italic;
     font-size: 15px;
     letter-spacing: 5px;
     margin: 10px;
@@ -46,8 +47,9 @@ body {
 }
 
 
-.descricao {
+.discretion {
     color: white;
+    font-style: italic;
     font-size: 18px;
     line-height: 1.5;
 
