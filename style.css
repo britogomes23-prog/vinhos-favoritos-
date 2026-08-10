@@ -1,5 +1,12 @@
+:root {
+    --paper: #601909;
+    --ink: #f4ecdf;
+}
+
 body {
     margin: 0;
+    background: var(--paper);
+    color: var(--ink);
 }
 
 .image {
@@ -37,7 +44,7 @@ body {
 }
 
 .smal {
-    color: black;
+    color: whitesmoke;
     font-style: italic;
     font-size: 15px;
     letter-spacing: 5px;
@@ -53,4 +60,190 @@ body {
     font-size: 18px;
     line-height: 1.5;
 
+}
+
+.intro {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 76px 24px 20px;
+    text-align: center;
+
+}
+
+.intro span {
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 14px;
+
+}
+
+.intro h2 {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    color: var(--ink);
+
+}
+
+.cellar {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 48px 24px 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+
+}
+
+.card {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 40px -18px rgba(28, 18, 16, 0.35);
+
+}
+
+.card-visual {
+    position: relative;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fdfaf3;
+    border-bottom: 4px solid var(--vc, var(--wine));
+    overflow: hidden;
+}
+
+.card-visual img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px;
+}
+
+.price-seal {
+    position: absolute;
+    top: 14px;
+    right: 30px;
+    z-index: 2;
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: #601909;
+    background: var(--gold-soft);
+    border: 1px solid rgba(70, 22, 31, 0.25);
+    border-radius: 999px;
+    padding: 6px 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    white-space: nowrap;
+}
+
+.info-wine {
+    color: #2a1712;
+    padding: 24px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-kicker {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #2a1712;
+    opacity: 0.75;
+    margin-bottom: 6px;
+}
+
+.info-wine h3 {
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: #2a1712;
+    line-height: 1.15;
+}
+
+.grapes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 14px 0 18px;
+}
+
+.grape-tag {
+    font-family: var(--body);
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--wine-deep);
+    background: var(--paper-dim);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 4px 11px;
+}
+
+.note {
+    position: relative;
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px dashed var(--line);
+}
+
+.note-quote {
+    font-family: var(--display);
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.98rem;
+    line-height: 1.5;
+    color: #2a1712;
+}
+
+.note-quote::before {
+    content: "“";
+    color: var(--gold);
+    font-size: 1.4em;
+    line-height: 0;
+    vertical-align: -0.35em;
+    margin-right: 2px;
+}
+
+footer {
+    text-align: center;
+    padding: 0 24px 60px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #ab9d9a;
+    opacity: 0.6;
+}
+
+@media (max-width:600px) {
+    .cellar {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .card {
+        transition: none;
+    }
 }
